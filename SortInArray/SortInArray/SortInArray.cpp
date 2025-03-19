@@ -20,6 +20,18 @@ public:
 		return;
 	}
 
+	void display() {
+		int count = 0;
+		while (count < this->size) {
+			cout << A[count];
+			if (count < this->size-1) {
+				cout << " -> ";
+			}
+			count++;
+		}
+		return;
+	}
+
 	void sortInInsert(int* A) {
 		for (int i = 1; i < this->capacity; i++) {
 			int pivot = A[i];
@@ -40,8 +52,11 @@ public:
 
 
 int main() {
-	int A[10];
-	sortInInsert(A);
+	Sort s;
+	s.insert(1);
+	s.insert(2);
+	s.insert(3);
+	s.display();
 	
 
 	return 0;
