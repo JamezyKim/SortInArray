@@ -12,7 +12,13 @@ public:
 		this->size = 0;
 	}
 
-
+	void insert(int element) {
+		if (this->size < this->capacity) {
+			this->A[size] = element;
+			this->size++;
+		}
+		return;
+	}
 
 	void sortInInsert(int* A) {
 		for (int i = 1; i < this->capacity; i++) {
